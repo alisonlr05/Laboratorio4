@@ -1,0 +1,116 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: #1a9fd4;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ===== BOTÓN ===== */
+.btn-nav {
+  background-color: #fff;
+  color: #1a9fd4;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-nav:hover {
+  background-color: #d6f0fa;
+}
+
+/* ===== CONTENEDOR CENTRAL ===== */
+.contenedor-principal {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== NAV ===== */
+.nav {
+  background-color: #2db5e8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px;
+  width: 90px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ===== ARTICLE ===== */
+.article {
+  background-color: #a0aab4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px;
+  flex: 1;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ===== ASIDE ===== */
+.aside {
+  background-color: #1a9fd4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px;
+  width: 90px;
+  flex-shrink: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #1a9fd4;
+  color: #fff;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 600px) {
+  .contenedor-principal {
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .nav, .article, .aside {
+    width: 100%;
+    flex-shrink: unset;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding: 12px 16px;
+  }
+
+  /* Orden: article → nav → aside */
+  .article { order: 1; min-height: 160px; border-right: none; }
+  .nav     { order: 2; border-right: none; }
+  .aside   { order: 3; border-bottom: none; }
+}

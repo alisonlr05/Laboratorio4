@@ -1,0 +1,104 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  background-color: #c8c8c8;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.btn-nav {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #aaa;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-nav:hover {
+  background-color: #e8e8e8;
+}
+
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.seccion-top,
+.seccion-bottom {
+  display: flex;
+  flex: 1;
+}
+
+
+.celda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #555;
+  border: 1px solid #bbb;
+  background-color: #fff;
+}
+
+
+#celda-a { flex: 1; }
+#celda-b { flex: 2; }
+
+
+#celda-c { flex: 1; }
+#celda-d { flex: 1; }
+#celda-e { flex: 1; }
+
+/* movil */
+@media (max-width: 600px) {
+
+  .seccion-top {
+    flex-direction: column;
+  }
+
+  #celda-a {
+    display: none;
+  }
+
+  #celda-b {
+    flex: 1;
+  }
+
+  .seccion-bottom {
+    flex-wrap: wrap;
+  }
+
+  #celda-c { flex: 1; min-height: 80px; }
+  #celda-d { flex: 1; min-height: 80px; }
+  #celda-e { flex: 0 0 100%; min-height: 80px; }
+}
